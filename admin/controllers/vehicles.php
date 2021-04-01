@@ -13,6 +13,10 @@
             }
             header("Location: .");
             break;
+        case 'register':
+            include('view/register.php');
+            header("Location: .");
+            break;
         case 'delete_vehicle':
             if ($vehicle_id) {
                 try {
@@ -59,4 +63,5 @@
                 });
             }
             include('view/vehicle_list.php');
+    
     }

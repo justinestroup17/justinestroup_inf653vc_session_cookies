@@ -1,5 +1,4 @@
-<form action="/action_page.php" method="get">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <input type="submit" value="Submit">
+<form action="." method="post">
+  Name: <input type="text" name="name">
+  <input type="submit" value="Register">
 </form>
