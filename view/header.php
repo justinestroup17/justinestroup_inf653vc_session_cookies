@@ -11,6 +11,6 @@
 <body>
     <main>
         <header>
-            <p><a href=".?action=register">Register Account</a></p>
             <h1>Zippy Used Autos</h1>
+            <p><a href=".?action=register">Register</a></p>
         </header>

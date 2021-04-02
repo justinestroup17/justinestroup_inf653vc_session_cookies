@@ -62,4 +62,4 @@
         $action === 'add_vehicle' ||
         $action === 'delete_vehicle' ||
         $action === 'list_vehicles') include('controllers/vehicles.php');
-        
+    if ($action === 'register') include('controllers/register.php');

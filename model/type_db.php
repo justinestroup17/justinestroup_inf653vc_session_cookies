@@ -17,7 +17,7 @@
         $statement->execute();
         $type = $statement->fetch();
         $statement->closeCursor();
-        $type_name = $type['type'];
+        $type_name = $type['Type'];
         return $type_name;
     }
 

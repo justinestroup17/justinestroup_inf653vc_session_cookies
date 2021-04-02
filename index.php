@@ -1,6 +1,6 @@
 <?php
-    // Start session management with a persistent cookie
-    $lifetime = 60 * 60 * 24; // 1 day in seconds
+    // Start of session
+    $lifetime = 60 * 60 * 24 * 14;  // 2 weeks in seconds
     session_set_cookie_params($lifetime, '/');
     session_start();
 
@@ -28,7 +28,7 @@
     if ($action === NULL) {
         $action = filter_input(INPUT_GET, 'action');
         if ($action === 'register') {
-            include('view\register.php');
+            include('admin/controllers/register.php');
         }
     }
 
