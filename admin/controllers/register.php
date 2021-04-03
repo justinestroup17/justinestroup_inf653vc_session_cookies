@@ -17,5 +17,8 @@
                 <p><a href=".?action=list_vehicles">Return To Vehicles</a></p>
             <?php }
             break;
+        case 'logout':
+            header("Location: view/logout.php");
+            break;
     }
  }

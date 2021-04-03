@@ -13,11 +13,12 @@
         <header>
             <h1>Zippy Used Autos</h1>
             <?php
-            if(!isset($_SESSION['userid'])) { ?>
+            if(!isset($_SESSION['userid']) && !($action = 'register'))
+            { ?>
             <!-- Routes to the controller with the action register -->
             <p><a href=".?action=register">Register</a></p>
             <?php } else {
-                echo ('Hello '.$_SESSION['userid'].'!');
-            } ?>
-
+                echo ('Welcome '.$_SESSION['userid'].'!'); ?>
+                <p>(<a href=".?action=logout">Sign Out</a>)</p>
+            <?php } ?>
         </header>

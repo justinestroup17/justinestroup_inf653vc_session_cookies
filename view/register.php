@@ -11,9 +11,11 @@
 <body>
     <main>
 <?php
+// Have user fill out first name in form if have not already
 if (!isset($_GET['fname'])) { ?>
 <form action="" method="get">
-    Name: <input type="text" name="fname"><br>
+    <p>Please enter your first name:</p><br>
+    <input type="text" name="fname"><br>
     <input type="submit" value="Submit" action="register">
   </form>
 <?php 
@@ -21,7 +23,8 @@ if (!isset($_GET['fname'])) { ?>
   $firstname = filter_input(INPUT_GET, 'fname');
   $_SESSION['userid'] = $firstname;
   $action = 'register';
+  echo 'Thank you for registering, ' . $_SESSION['userid'] . '!';
   ?>
   <p>Thank you for registering!</p>
-  <p><a href="http://localhost/justine_stroup_inf653vc_session_cookies/">Back To Home</a></p>
-<?php } ?>
+  <p><a href="http://localhost/justine_stroup_inf653vc_session_cookies/">Click here </a> to view our vehicles list</p>
+<?php }?>
