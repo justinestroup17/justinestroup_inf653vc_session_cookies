@@ -12,7 +12,7 @@
                     <?php } else { ?>
                 <option value="<?= $make['ID']; ?>">
                     <?php } ?>
-                    <?= $make['make']; ?>
+                    <?= $make['Make']; ?>
                 </option>
                 <?php endforeach; ?>
             </select>
@@ -29,7 +29,7 @@
                     <?php } else { ?>
                 <option value="<?= $type['ID']; ?>">
                     <?php } ?>
-                    <?= $type['type']; ?>
+                    <?= $type['Type']; ?>
                 </option>
                 <?php endforeach; ?>
             </select>
@@ -45,7 +45,7 @@
                     <?php } else { ?>
                 <option value="<?= $class['ID']; ?>">
                     <?php } ?>
-                    <?= $class['class']; ?>
+                    <?= $class['Class']; ?>
                 </option>
                 <?php endforeach; ?>
             </select>

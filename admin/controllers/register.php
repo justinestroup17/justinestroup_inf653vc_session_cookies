@@ -1,19 +1,11 @@
-<?php
+<?php 
     switch($action) {
         case 'register':
-            // Check if user has registered firstname, if not, send to form
-            if (!isset($firstname) && !($registered)) {
+            if(!isset($firstname)) {
                 header("Location: view/register.php");
-            } else {
-                $_SESSION["userid"] = $firstname;
-                echo 'Thank you for registering (coming from switch, )' . $firstname . '!';
-                $registered = TRUE ?>
-                <p><a href=".?action=list_vehicles">Return To Vehicles</a></p>
-            <?php }
+            }
+            include('view/register.php');
             break;
         case 'logout':
-            $_SESSION = array();   // Clear all session data from memory
-            session_destroy();     // Clean up the session ID
-            header("Location: view/logout.php");
             break;
     }
