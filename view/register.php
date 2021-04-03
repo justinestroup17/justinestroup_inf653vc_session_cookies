@@ -14,10 +14,14 @@
 if (!isset($_GET['fname'])) { ?>
 <form action="" method="get">
     Name: <input type="text" name="fname"><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" action="register">
   </form>
 <?php 
-} else { ?>
+} else {
+  $firstname = filter_input(INPUT_GET, 'fname');
+  $_SESSION['userid'] = $firstname;
+  $action = 'register';
+  ?>
   <p>Thank you for registering!</p>
   <p><a href="http://localhost/justine_stroup_inf653vc_session_cookies/">Back To Home</a></p>
 <?php } ?>

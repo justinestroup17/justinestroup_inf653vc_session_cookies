@@ -12,7 +12,12 @@
     <main>
         <header>
             <h1>Zippy Used Autos</h1>
+            <?php
+            if(!isset($_SESSION['userid'])) { ?>
             <!-- Routes to the controller with the action register -->
             <p><a href=".?action=register">Register</a></p>
+            <?php } else {
+                echo ('Hello '.$_SESSION['userid'].'!');
+            } ?>
 
         </header>
