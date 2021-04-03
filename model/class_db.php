@@ -17,7 +17,7 @@
         $statement->execute();
         $class = $statement->fetch();
         $statement->closeCursor();
-        $class_name = $class['class'];
+        $class_name = $class['Class'];
         return $class_name;
     }
 

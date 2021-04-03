@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <main>
+    <main class="center">
+    <header>
+    <h1>Zippy Used Autos</h1>
 <?php
 // Have user fill out first name in form if have not already
 if (!isset($_GET['fname'])) { ?>
 <form action="" method="get">
-    <label>Please enter your first name:</label>
+    <label>Please enter your first name:</label><br>
     <input type="text" name="fname" required><br>
     <label>&nbsp;</label>
-    <input type="submit" value="Submit" action="register" max="20" required>
+    <input class="button blue button-slim" type="submit" value="Register" action="register" max="20" required >
   </form>
 <?php 
 } else {
