@@ -1,4 +1,5 @@
 <?php 
+global $firstname;
     switch($action) {
         case 'register':
             if(!isset($firstname)) {

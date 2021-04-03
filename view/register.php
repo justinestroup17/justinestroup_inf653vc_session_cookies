@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -17,15 +18,17 @@ if (!isset($_GET['fname'])) { ?>
     <label>Please enter your first name:</label>
     <input type="text" name="fname" required><br>
     <label>&nbsp;</label>
-    <input type="submit" value="Submit" action="register">
+    <input type="submit" value="Submit" action="register" max="20" required>
   </form>
 <?php 
 } else {
-  $firstname = filter_input(INPUT_GET, 'fname');
+  global $firstname;
+  $firstname = $_REQUEST['fname'];
   $_SESSION['userid'] = $firstname;
   echo 'Thank you for registering, ' . $_SESSION['userid'] . '!';
   ?>
   <p><a href="/justine_stroup_inf653vc_session_cookies/">Click here </a> to view our vehicles list</p>
   
   
-<?php }?>
+<?php }
+  include('footer.php');
