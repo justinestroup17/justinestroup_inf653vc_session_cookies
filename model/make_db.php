@@ -17,7 +17,7 @@
         $statement->execute();
         $make = $statement->fetch();
         $statement->closeCursor();
-        $make_name = $make['Make'];
+        $make_name = $make['make'];
         return $make_name;
     }
 

@@ -14,4 +14,5 @@
             <h1>Zippy Used Autos</h1>
             <!-- Routes to the controller with the action register -->
             <p><a href=".?action=register">Register</a></p>
+
         </header>
