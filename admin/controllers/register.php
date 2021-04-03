@@ -8,5 +8,6 @@ global $firstname;
             include('view/register.php');
             break;
         case 'logout':
+            header("Location: view/logout.php");
             break;
     }
